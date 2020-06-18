@@ -1,0 +1,17 @@
+<doctype html="">
+    {% import "bootstrap/wtf.html" as wtf %}
+    <title>Edit</title>
+    <body>
+        <div class="content-section" style="padding: 50px 0; border-top: 1px solid #525252;">
+            <div class="center" style="margin: auto; width: 50%; padding: 10px;">
+              <h1>Edit Note</h1>
+              <br/>
+              <form method="post">
+                {{ wtf.quick_form(form) }}
+              </form>
+              
+            </div>
+          </div>
+    </body>
+    
+</doctype>

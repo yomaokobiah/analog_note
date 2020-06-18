@@ -1,0 +1,436 @@
+/* Basic styling */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: rgb(183, 247, 242);
+}
+#app {
+    background-color: rgb(183, 247, 242);
+}
+nav {
+  padding: 0 15px;
+}
+a {
+  color: #333333;
+  text-decoration: none;
+}
+.menu,
+.submenu {
+  list-style-type: none;
+}
+.logo {
+  font-size: 20px;
+  padding: 7.5px 10px 7.5px 0;
+  font-family: Ravi Prakash;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 44px;
+  line-height: 90px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  padding-top: 15px;
+  margin-left: 59px;
+}
+
+/* menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu li a {
+  display: block;
+  padding: 15px 5px;
+}
+.menu li.subitem a {
+  padding: 15px;
+}
+
+/*login signup */
+.item {
+  padding: 10px;
+}
+.item.button {
+  /* padding: 9px 5px;
+  width: 150px;
+  height: 50px; */
+  top: 27px;
+}
+.item:not(.button) a:hover,
+.item a:hover::after {
+  color: #ccc;
+}
+
+
+
+@media all and (min-width: 700px) {
+  .menu {
+    justify-content: center;
+  }
+  .logo {
+    flex: 1;
+  }
+  .item.button {
+    width: auto;
+    order: 1;
+    display: block;
+  }
+  
+  .menu li.button a {
+    padding: 10px 15px;
+    margin: 5px 0;
+  }
+  .button a {
+      background: #FFFFFF;
+      border-radius: 30px;
+  }
+  .button.secondary {
+    border: 0;
+  }
+  .button.secondary a {
+      background: #FFFFFF;
+      border-radius: 30px;
+  }
+  .button a:hover {
+    text-decoration: none;
+  }
+  .button:not(.secondary) a:hover {
+    background: royalblue;
+    border-color: darkblue;
+  }
+  .button a:focus {
+    background: royalblue;
+    border-color: darkblue;
+  }
+}
+
+/* Desktop menu */
+@media all and (min-width: 960px) {
+  .menu {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background: none;
+  }
+  .logo {
+    order: 0;
+  }
+  .item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+  }
+  .button {
+    order: 2;
+  }
+  
+}
+
+  /* box */
+  .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 500px;
+    }
+    
+    .box div {
+      width: 1220px;
+      height: 310px;
+      left: 110px;
+      top: 351px; 
+      background: #5DEBE2;
+    }
+
+    .box p {
+      width: 839px;
+      height: 310px;
+      left: 300px;
+      top: 351px;
+      margin-left: 176px;
+      font-family: Quattrocento Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 64px;
+      line-height: 71px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      
+      color: #000000;
+      
+    }
+
+    /* footer */
+
+    footer {
+      font-family: Quattrocento Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 27px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin-left: 33px;
+    }
+    .bottom {
+      padding-top: 50px;
+      padding-top: 50px;
+     padding-bottom: 23px;
+    }
+
+
+    .custom-select select {
+      display: none; /*hide original SELECT element:*/
+    }
+    
+    .select-selected {
+      background: rgb(8, 177, 165);
+    }
+    
+    /*style the arrow inside the select element:*/
+    .select-selected:after {
+      position: absolute;
+      content: "";
+      top: 14px;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      border-color: #fff transparent transparent transparent;
+    }
+    
+    /*point the arrow upwards when the select box is open (active):*/
+    .select-selected.select-arrow-active:after {
+      border-color: transparent transparent #fff transparent;
+      top: 7px;
+    }
+    
+    /*style the items (options), including the selected item:*/
+    .select-items div,.select-selected {
+      color: black;
+      padding: 8px 16px;
+      border: 1px solid transparent;
+      border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+      cursor: pointer;
+      user-select: none;
+    }
+    
+    /*style items (options):*/
+    .select-items {
+      position: absolute;
+      background: rgb(8, 177, 165);
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 99;
+    }
+    
+    /*hide the items when the select box is closed:*/
+    .select-hide {
+      display: none;
+    }
+    
+    .select-items div:hover, .same-as-selected {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    .custom-select {
+      position: relative;
+      font-family: Arial;
+    }
+
+    
+    .search {
+      width: 450px;
+      position: relative;
+      display: flex;
+    }
+    
+    .searchTerm {
+      width: 100%;
+      /* border: 3px solid #00B4CC; */
+      /* border-right: none; */
+      padding: 5px;
+      height: 38px;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+      color: #9DBFAF;
+  
+    }
+    
+    .searchTerm:focus{
+      color: #00B4CC;
+    }
+    
+    .searchButton {
+      width: 40px;
+      height: 36px;
+      /* border: 1px solid #00B4CC; */
+      /* background: #00B4CC; */
+      text-align: center;
+      color: #fff;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    .searchicon {
+      width: 15px;
+      height: 23px;
+    }
+    /*Resize the wrap to see the search bar change!*/
+    .wrap{
+  
+      width: 30%;
+      /* position: absolute; */
+      top: 82%;
+      left: 15%;
+      /* transform: translate(-50%, -50%); */
+      margin-top: 23px;
+      margin-bottom:23px;
+  
+    }
+
+    .column {
+      float: left;
+      width: 50%;
+      padding: 50px;
+      height: 300px; /* Should be removed. Only for demonstration */
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .boxs {
+      height: 100%;
+      background: #5DEBE2;
+      /* width: 1220px; */
+      /* top: 83px; */
+      margin-top: -40px;
+
+    }
+    
+    .under {
+      background: #fff;
+      /* width: 1220px; */
+      /* top: 83px; */
+      margin-top: 118px;
+      top: 8.5%;
+      bottom: 72.75%;
+    }
+    .myDiv1 {
+      border: 5px  white;
+      background-color: white;  
+      text-align: center;
+      margin-top: 43px;
+      padding: 25px;
+    }
+    .myDiv1 p {
+        color: #000000;
+        text-align: right;
+
+    }
+    .myDiv1 h2 {
+      color: #fff;
+  }
+  .myDiv {
+      border: 5px  white;
+      background-color: white;  
+      text-align: center;
+      margin-top: 43px;
+      padding: 20px;
+    }
+   
+  .second {
+      background: #5DEBE2;
+      padding: 40px;
+  }
+  textarea {
+      width: 100%;
+  border: 1px solid white;
+  height: 100%;
+  margin: 0px;
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #868383;
+  }
+
+
+  input[type=text], select, textarea {
+      width: 134%;
+      padding: 17px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+  
+    }
+    
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+    
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      /* float: right; */
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+    
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+
+    .new {
+      background-color: white;
+    color: black;
+    padding: 13px 163px;
+    }

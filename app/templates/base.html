@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ title }} | Analog </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Okobiah Ogheneyoma">
+    <!--Bootstrap link-->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+   
+</head>
+<body>
+    <div id="app">
+        <nav>
+         <ul class="menu">
+             <li class="logo"> <a href="/home"><img src="/static/images/ANALOG.png"/></a> </li>
+             <li class="item button"> <a href="/home">Home</a> </li>
+             <li class="item button"> <a href="/login">Login</a> </li>
+             <li class="item button"> <a href="/signup">Sign Up</a> </li>
+         </ul>  
+        </nav>
+    </div>  
+      <br>
+    
+        {% block body %}
+        {% endblock %}
+        
+      <div class="bottom">
+        <footer>&copy;2020 ANALOG. All Rights Reserved</footer>
+      </div>
+    
+</body>
+</html>

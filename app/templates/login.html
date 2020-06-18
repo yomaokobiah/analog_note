@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block body %}
+<div class="form-section">
+  <form class="forms" action="/login" method="POST">
+      
+      <div class="row">
+        
+        <div class="col-75">
+          <input type="text" id="lname" name="username" placeholder="username">
+        </div>
+      </div>
+      <div class="row">
+        
+              <div class="col-75">
+                <input style="height: 50px; width: 180%; margin-top: 18px;" type="password" id="lname" name="password" placeholder="     password">
+              </div>
+            </div>
+            
+      <div>
+          <p class="submit-p">No account? <a href="/signup"> Sign up</a></p>
+         
+      </div>
+
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+      </form>
+</div>
+{% endblock %}
+     
