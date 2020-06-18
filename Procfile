@@ -1,1 +1,1 @@
-web: gunicorn analog_note:app
+web: gunicorn run:app
