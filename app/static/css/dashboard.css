@@ -250,7 +250,7 @@ a {
 
     
     .search {
-      width: 450px;
+      width: 320%;
       position: relative;
       display: flex;
     }
@@ -263,12 +263,12 @@ a {
       height: 38px;
       border-radius: 5px 0 0 5px;
       outline: none;
-      color: #9DBFAF;
+      color: #3f7e7a;
   
     }
     
     .searchTerm:focus{
-      color: #00B4CC;
+      color: #000000;
     }
     
     .searchButton {
@@ -357,6 +357,13 @@ a {
       background: #5DEBE2;
       padding: 40px;
   }
+
+.second1 {
+        background: #5DEBE2;
+        padding: 40px;
+        overflow-y: scroll;
+        max-height: 320px;
+  }
   textarea {
       width: 100%;
   border: 1px solid white;
@@ -409,6 +416,11 @@ a {
     }
     
     .col-75 {
+      float: left;
+      width: 100%;
+      margin-top: 6px;
+    }
+    .col-755 {
       float: left;
       width: 75%;
       margin-top: 6px;

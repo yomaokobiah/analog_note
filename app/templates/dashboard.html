@@ -43,21 +43,25 @@
                 <!-- <i class="fa fa-search"></i> -->
                 <img class="searchicon" src="/static/images/search.png"/>
               </button>
+            
             </div>
+            
       </div>
+      <p style="color:gray; font-size: 12px;"> Note: For date enter in format day/month/year. Example 01/06/20; 1st June 2020.</p>
+
   </form>
 </div>
 
 <div style="background-color: #5DEBE2; padding: 10px; margin-top: 34px;">
-        <div class="second">
+        <div class="second1">
                 
           <div class="row">
             {% for note in notes %}
             <div class="col-75" style="background-color: white;">
               
-              <div><p>{{ note.title }} says: <b>{{ note.purpose }}</b></p></div>
-              
-              <p><a href="{{ url_for('notes.view_note',n_id=note.minute_id) }}">View</a> <a href="/edit/<note.id>">Edit</a> <a href="{{ url_for('notes.delete_note',d_id=note.minute_id) }}">Delete</a></p>
+              <div><p style="padding-left:5px; padding-top: 5px;">Title: {{ note.title }} <br>Purpose: {{ note.purpose }} <br> Written by: {{ note.full_name }}</p></div>
+              <br>
+              <p style="padding-left: 5px; padding-bottom: 5px;"><a   href="{{ url_for('notes.view_note',n_id=note.minute_id) }}"> <button style="border:2px solid #5DEBE2; width: 100px; font-size: 15px;">View</button> </a> <a href="{{ url_for('notes.edit_note',e_id=note.minute_id) }}"><button style="border: 2px solid #5DEBE2; width: 100px; font-size: 15px;">Edit</button></a>   <a href="{{ url_for('notes.delete_note',d_id=note.minute_id) }}"><button style="border: 2px solid #5DEBE2; width: 100px; font-size: 15px;">Delete</button></a></p>
             </div>
             {% endfor %}
           </div>
@@ -69,31 +73,31 @@
             <div class="second">
                     <form action="{{ url_for('home.handle_data') }}" method="post">
                         <div class="row">
-                          <div class="col-75">
+                          <div class="col-755">
                             <input type="text" id="fname" name="title" placeholder="Title">
                           </div>
                         </div>
                         <div class="row">
                           
-                          <div class="col-75">
+                          <div class="col-755">
                             <input type="text" id="lname" name="purpose" placeholder="Purpose">
                           </div>
                         </div>
                         <div class="row">
                           
-                                <div class="col-75">
+                                <div class="col-755">
                                   <input type="text" id="lname" name="name_of_org" placeholder="organisation">
                                 </div>
                               </div>
                               <div class="row">
                           
-                                    <div class="col-75">
+                                    <div class="col-755">
                                       <input type="text" id="lname" name="attendees" placeholder="Attendees">
                                     </div>
                                   </div>
                         <div class="row">
                           
-                          <div class="col-75">
+                          <div class="col-755">
                             <textarea id="subject" name="body" placeholder="Body" style="height:200px"></textarea>
                           </div>
                         </div>

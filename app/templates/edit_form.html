@@ -1,17 +1,58 @@
-<doctype html="">
+<!DOCTYPE html>
+<html>
+  <body>
     {% import "bootstrap/wtf.html" as wtf %}
-    <title>Edit</title>
-    <body>
-        <div class="content-section" style="padding: 50px 0; border-top: 1px solid #525252;">
-            <div class="center" style="margin: auto; width: 50%; padding: 10px;">
-              <h1>Edit Note</h1>
-              <br/>
-              <form method="post">
-                {{ wtf.quick_form(form) }}
-              </form>
+        <h4>Edit Post</h4>
+        <br />
+            {% from "_formhelpers.html" import render_field %}
+
+            {{ wtf.quick_form(form) }}
+            {% block title %}
+    {% if edit_note %}
+        Add Department
+    {% else %}
+        Edit Department
+    {% endif %}
+{% endblock %}
+{% block body %}
+<div class="content-section">
+ <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <div class="center">
+            {% if edit_note %}
+                <h1>Add Department</h1>
+            {% else %}
+                <h1>Edit Department</h1>
+            {% endif %}
+            <br/>
+            {{ wtf.quick_form(form) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+            <dl>
+              {{ render_field(form.title) }}
+              {{ render_field(form.purpose) }}
+              {{ render_field(form.name_of_org) }}
+              {{ render_field(form.attendees) }}
+              {{ render_field(form.body) }}
               
-            </div>
-          </div>
-    </body>
+          </dl>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            {% if error %}
+                <p class="error"><strong>Error: </strong>{{error}}</p>
+            {% endif %}
+        </form>
+        {% if error %}
+            <p class="error"><strong>Error: </strong>{{error}}</p>
+        {% endif %}
+
+  
+</body>
+</html>
     
-</doctype>
+    
