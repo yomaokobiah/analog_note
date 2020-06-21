@@ -5,14 +5,14 @@
         <div class="box" style="background-color: #5DEBE2; position: relative;">
             <div style="display: flex; flex-direction: column; align-self: center; margin-left: 65px; margin-right: 65px; margin-top: 65px; margin-bottom: 89px; background-color:white;">
                 {% block body %}
-                <h1 style="padding-top: 5px;">Title: {{ note.title }}</h1>
-                <h3>Purpose: {{ note.purpose }}</h3>
-                <h3>Organisation: {{ note.organisation }}</h3>
-                <p>The content: {{note.body}} </p>
-                <h3>People who attended: {{ note.attendees }}</h3>
-                <h3>Written by: {{ note.full_name }}</h3>
-                <h3>Date created: {{ create }} </h3>
-                <h3>Date modified: {{ modified }}</h3>
+                <h1 style="padding-top: 5px; padding-left: 5px;">Title: {{ note.title }}</h1>
+                <h3 style="padding-right: 5px; padding-left: 5px;">Purpose: {{ note.purpose }}</h3>
+                <h3 style="padding-right: 5px; padding-left: 5px;">Organisation: {{ note.organisation }}</h3>
+                <p style="padding-right: 5px; padding-left: 5px;"><h3 style="padding-right: 5px; padding-left: 5px;">The content:</h3> {{note.body}} </p>
+                <h3 style="padding-right: 5px; padding-left: 5px;">People who attended: {{ note.attendees }}</h3>
+                <h3 style="padding-right: 5px; padding-left: 5px;">Written by: {{ note.full_name }}</h3>
+                <h3 style="padding-right: 5px; padding-left: 5px;">Date created: {{ create }} </h3>
+                <h3 style="padding-right: 5px; padding-left: 5px;">Date modified: {{ modified }}</h3>
 
 
                 {% endblock %} 

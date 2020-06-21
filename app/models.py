@@ -66,3 +66,4 @@ class Minutes(db.Model):
    
     def _repr_(self):
         return f"Minutes('{self.id}', '{self.title}', '{self.body}', '{self.created_by}','{self.name_of_org}', '{self.purpose}', '{self.date_created}', '{self.date_modified}', '{self.attendees}')"
+

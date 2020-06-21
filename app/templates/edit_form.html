@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html>
+  <title>Edit Note</title>
+  
+  <link href="{{ url_for('static', filename='css/dashboard.css') }}" rel="stylesheet">
   <body>
-    {% import "bootstrap/wtf.html" as wtf %}
-        <h4>Edit Post</h4>
-        <br />
-            {% from "_formhelpers.html" import render_field %}
-
-            {{ wtf.quick_form(form) }}
-            {% block title %}
-    {% if edit_note %}
-        Add Department
-    {% else %}
-        Edit Department
-    {% endif %}
-{% endblock %}
+        
 {% block body %}
-<div class="content-section">
- <div class="outer">
-    <div class="middle">
-      <div class="inner">
-        <div class="center">
-            {% if edit_note %}
-                <h1>Add Department</h1>
-            {% else %}
-                <h1>Edit Department</h1>
-            {% endif %}
-            <br/>
-            {{ wtf.quick_form(form) }}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{% endblock %}
-            <dl>
-              {{ render_field(form.title) }}
-              {{ render_field(form.purpose) }}
-              {{ render_field(form.name_of_org) }}
-              {{ render_field(form.attendees) }}
-              {{ render_field(form.body) }}
-              
-          </dl>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-            {% if error %}
-                <p class="error"><strong>Error: </strong>{{error}}</p>
-            {% endif %}
-        </form>
-        {% if error %}
-            <p class="error"><strong>Error: </strong>{{error}}</p>
-        {% endif %}
 
+  
+
+<div class="column1" >
+  <div class="second">
+      <form method="POST" action="{{ url_for('notes.edit_note',e_id=note.minute_id) }}">
+        
+        <div class="row">
+          <div class="col-755">
+            <div>{{ form.title.label }} {{ form.title() }}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-755">
+            <div>{{ form.purpose.label }} {{ form.purpose() }}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-755">
+            <div>{{ form.name_of_org.label }} {{ form.name_of_org() }}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-755">
+            <div>{{ form.attendees.label }} {{ form.attendees() }}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-755">
+            <div>{{ form.body.label }} {{ form.body() }}</div>
+          </div>
+        </div>
+        <div class="row" style="padding-top: 5px;">
+          <input type="submit" value="Submit">
+        </div>
+
+      </form>
+      
+  </div>
+  <form action="/dashboard" style="padding-top: 15px;">
+    <button type="submit" style="width: 200px;  height: 50px;background: #FFFFFF;border-radius: 30px;">Dashboard</button> 
+</form>
+</div>
+
+
+{% endblock %}
+      
   
 </body>
 </html>

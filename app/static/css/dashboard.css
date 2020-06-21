@@ -305,6 +305,12 @@ a {
       padding: 50px;
       height: 300px; /* Should be removed. Only for demonstration */
     }
+    .column1 {
+      float: left;
+      width: 75%;
+      padding: 50px;
+      padding-left: 25%;
+    }
     
     /* Clear floats after the columns */
     .row:after {
