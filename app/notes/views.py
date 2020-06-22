@@ -1,4 +1,4 @@
-from flask_login import login_required, 
+from flask_login import login_required
 from flask import flash, redirect, render_template, url_for, request, redirect
 from . import notes
 from ..models import User, Minutes
