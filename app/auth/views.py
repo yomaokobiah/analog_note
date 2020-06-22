@@ -16,7 +16,7 @@ def signup():
         email = request.form.get("email")
         position = request.form.get("position")
         confirm_password = request.form.get("confirm_password")
-        if User.query.filter_by(username = User.username).first() is None:
+        if User.query.filter_by(username = User.username).first() is not None:
             if confirm_password == password:
                 user = User(full_name = full_name, username = username,password = password, email = email, position = position)
                 # add employee to the database
